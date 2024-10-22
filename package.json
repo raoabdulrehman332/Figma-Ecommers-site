@@ -11,11 +11,15 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.1",
+    "@nextui-org/react": "^2.4.8",
     "antd": "^5.21.2",
+    "firebase": "^10.14.1",
+    "framer-motion": "^11.11.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^6.27.0",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "sweetalert2": "^11.14.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

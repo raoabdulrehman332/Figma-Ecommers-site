@@ -12,7 +12,7 @@ export default function OurProducts() {
           .then(res => setPrducts(res.products));  
           setloding(false)        
     },[])
-    console.log('Products===>', Products);
+    // console.log('Products===>', Products);
     
     let arr =[1,2,3,4]
   return (

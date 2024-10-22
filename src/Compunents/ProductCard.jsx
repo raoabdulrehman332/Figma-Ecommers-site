@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 export default function ProductCard( { item }) {
-    console.log('item==>', item);
+    // console.log('item==>', item);
     
   return (
     <Link to={`/products/${item.id}`}>

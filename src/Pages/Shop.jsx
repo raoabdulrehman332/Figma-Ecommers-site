@@ -15,7 +15,7 @@ export default function Shop() {
       .then(data => setproducts(data.products));
     },[ limit ])
 
-    console.log('products==>', products);
+    // console.log('products==>', products);
     
     
   return (

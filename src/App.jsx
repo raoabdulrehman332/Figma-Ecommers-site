@@ -7,9 +7,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Shop from './Pages/Shop'
 import Header from './Compunents/Header'
 import ProductDetail from './Pages/ProductDetail'
+import Card from './Pages/Card'
+import SignIn from './Pages/SignIn'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
@@ -19,6 +21,8 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/shop' element={<Shop/>}  />
       <Route path='/products/:id' element={<ProductDetail/>}  />
+      <Route path='/card' element={<Card />}  />
+      <Route path='/signIn' element={<SignIn />}  />
     </Routes>
     </BrowserRouter>
     

@@ -1,11 +1,13 @@
 import { PlusOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import { cardContext } from '../Context/CardContext';
 
 export default function ProductDetail() {
+  const { addItemToCard , isItemAdded }  = useContext(cardContext)
     const { id } = useParams()
-    console.log('params id==>', id);
+    // console.log('Card Item==>', CardItem);
 
     let [products , setproducts] = useState([])
 
@@ -14,7 +16,7 @@ export default function ProductDetail() {
         .then(res => res.json())
         .then((data)=> setproducts(data));        
     },[])
-    console.log('single product==>', products);
+    // console.log('single product==>', products);
     // console.log('products reviews==>', products.reviews[0]);
     
     
@@ -133,9 +135,12 @@ export default function ProductDetail() {
            </div>
           </div>
         </div>
-        <div className="w-full">
-          <Button icon={<PlusOutlined />} iconPosition='start' size='large' styles={"py-3 px-10 border-2  rounded-xl hover:border-green-500 hover:text-green-500  transition-all"}>
-            Add to card
+        <div className="w-full h-full">
+          <Button icon={<PlusOutlined />} iconPosition='start' size='large' className='px-20 py-2' styles={"py-3 px-10 border-2  rounded-xl hover:border-green-500 hover:text-green-500  transition-all"}
+          onClick={addItemToCard(products)}>
+           {
+            isItemAdded(products.id) ? `Added (${isItemAdded(products.id).quantity})` : `Add to card`
+           } 
           </Button>
           
         </div>
